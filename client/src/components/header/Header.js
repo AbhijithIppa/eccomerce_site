@@ -6,16 +6,22 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaLightbulb, FaUserPlus } from "react-icons/fa";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import img from "./dan-cristian-padure-mIyZDPhuyY0-unsplash.jpg";
-import { MdExplore, MdOutlineHandyman } from "react-icons/md";
-import seedsimg from "../../images/seeds.jpg";
+import { MdExplore } from "react-icons/md";
+
 import planterimg from "../../images/planter.jpg";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { FaSeedling } from "react-icons/fa";
-import { BsBasket2Fill } from "react-icons/bs";
+
 import toolsimg from "../../images/tools.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import {IoIosMan} from "react-icons/io"
+import {ImWoman} from "react-icons/im"
+import {FaChild} from "react-icons/fa"
+import menimg from "../../images/men_fashion.jpg"
+import womenimg from "../../images/women_fashion.jpg"
+import kidsimg from "../../images/kids_fashion.jpg"
+
 
 function Header() {
   let navigate = useNavigate();
@@ -50,7 +56,7 @@ function Header() {
             </a>
 
             <a class="navbar-brand" href="#">
-              FARM
+              FASHION
             </a>
             <button
               class="navbar-toggler"
@@ -106,16 +112,16 @@ function Header() {
                 />
                 <BiSearchAlt className="sicon"></BiSearchAlt>
                 <BiFilterAlt className="sicon"></BiFilterAlt>
-                <MdMonitorHeart className="sicon"></MdMonitorHeart>
+               
                 <HiShoppingCart className="sicon"></HiShoppingCart>
-                <FaLightbulb className="icon"></FaLightbulb>
+              
                 <FaUserPlus className="sicon"></FaUserPlus>
               </form>
             </div>
           </div>
         </nav>
         <div className="header-content">
-          <h1 className="text">DIVE IN</h1>
+          <h1 className="text">NEW FASHION IS HERE</h1>
           <BsChevronDoubleDown
             style={{ color: "white", fontSize: "30" }}
             className="test"
@@ -177,18 +183,18 @@ function Header() {
         >
           <div className="d-flex">
             <div className="img-container">
-              <img src={seedsimg} alt="Profile" className="cir-image" />
+              <img src={menimg} alt="Profile" className="cir-image" />
             </div>
             <Card.Body>
               <div style={{ display: "flex" }}>
-                <Card.Title>Seeds</Card.Title>
-                <FaSeedling
+                <Card.Title>Men</Card.Title>
+                <IoIosMan
                   style={{
                     marginLeft: "10px",
                     marginTop: "3px",
                     color: "366207",
                   }}
-                ></FaSeedling>
+                ></IoIosMan>
               </div>
 
               <Card.Text>Quote</Card.Text>
@@ -209,18 +215,18 @@ function Header() {
         >
           <div className="d-flex">
             <div className="img-container">
-              <img src={planterimg} alt="Profile" className="cir-image" />
+              <img src={womenimg} alt="Profile" className="cir-image" />
             </div>
             <Card.Body>
               <div style={{ display: "flex" }}>
-                <Card.Title>Planter</Card.Title>
-                <BsBasket2Fill
+                <Card.Title>Women</Card.Title>
+                <ImWoman
                   style={{
                     marginLeft: "10px",
                     marginTop: "3px",
                     color: "5D1E1E",
                   }}
-                ></BsBasket2Fill>
+                ></ImWoman>
               </div>
 
               <Card.Text>Quote</Card.Text>
@@ -234,18 +240,18 @@ function Header() {
         >
           <div className="d-flex">
             <div className="img-container">
-              <img src={toolsimg} alt="Profile" className="cir-image" />
+              <img src={kidsimg} alt="Profile" className="cir-image" />
             </div>
             <Card.Body>
               <div style={{ display: "flex" }}>
-                <Card.Title>Tools</Card.Title>
-                <MdOutlineHandyman
+                <Card.Title>Kids</Card.Title>
+                <FaChild
                   style={{
                     marginLeft: "10px",
                     marginTop: "3px",
                     color: "515151",
                   }}
-                ></MdOutlineHandyman>
+                ></FaChild>
               </div>
 
               <Card.Text>Quote</Card.Text>
