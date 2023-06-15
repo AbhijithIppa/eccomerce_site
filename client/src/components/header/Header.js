@@ -7,7 +7,7 @@ import { FaLightbulb, FaUserPlus } from "react-icons/fa";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import img from "./dan-cristian-padure-mIyZDPhuyY0-unsplash.jpg";
 import { MdExplore } from "react-icons/md";
-
+import { Carousel } from 'react-bootstrap';
 import planterimg from "../../images/planter.jpg";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -21,14 +21,20 @@ import {FaChild} from "react-icons/fa"
 import menimg from "../../images/men_fashion.jpg"
 import womenimg from "../../images/women_fashion.jpg"
 import kidsimg from "../../images/kids_fashion.jpg"
+import carousel1 from "../../images/carousel1.jpg"
 
 
 function Header() {
+
   let navigate = useNavigate();
 
   let categ_seeds = () => {
     navigate("/categ_seeds");
   };
+
+  let tocart=()=>{
+    navigate("/cart")
+  }
 
   let [customs, setCustoms] = useState([]);
 
@@ -44,6 +50,13 @@ function Header() {
     } catch (err) {
       console.log("error in getting data", err);
     }
+  };
+  const imageStyle = {
+    objectFit: 'contain', // Ensure images fit within the carousel viewport
+    
+   
+maxHeight: '100%', // Set maximum height of images to 100% of carousel height
+    width: '100%', // Set width of images to 100% to maintain aspect ratio
   };
 
   return (
@@ -113,13 +126,42 @@ function Header() {
                 <BiSearchAlt className="sicon"></BiSearchAlt>
                 <BiFilterAlt className="sicon"></BiFilterAlt>
                
-                <HiShoppingCart className="sicon"></HiShoppingCart>
+                <HiShoppingCart onClick={tocart} className="sicon"></HiShoppingCart>
               
                 <FaUserPlus className="sicon"></FaUserPlus>
               </form>
             </div>
           </div>
         </nav>
+<div >
+{/* <Carousel style={{maxHeight: '100vh'}}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={carousel1}
+          style={imageStyle}
+          alt="Image 1"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="image2.jpg"
+          alt="Image 2"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="image3.jpg"
+          alt="Image 3"
+        />
+      </Carousel.Item>
+    </Carousel> */}
+</div>
+    
+
+
         <div className="header-content">
           <h1 className="text">NEW FASHION IS HERE</h1>
           <BsChevronDoubleDown
@@ -127,7 +169,19 @@ function Header() {
             className="test"
           />
         </div>
+
+
+
       </div>
+
+
+
+
+
+
+
+
+
 
       <div style={{ display: "flex", marginLeft: "110px", marginTop: "20px" }}>
         <h2 style={{ fontSize: "42px" }}>Explore</h2>

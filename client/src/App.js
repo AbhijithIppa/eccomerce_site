@@ -5,6 +5,7 @@ import Home from "./components/home/Home"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categ_seeds from "./components/categ_seeds/Categ_seeds";
 import Header from "./components/header/Header";
+import Cart from "./components/cart/Cart"
 function App() {
 
   const routerobj=createBrowserRouter([
@@ -19,6 +20,10 @@ function App() {
         {
           path:"/categ_seeds",
           element:<Categ_seeds></Categ_seeds>
+        },
+        {
+          path:"/cart",
+          element:<Cart></Cart>
         }
       ]
     }
