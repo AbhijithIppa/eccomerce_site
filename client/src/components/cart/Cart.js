@@ -2,6 +2,10 @@ import React from "react";
 import "./Cart.css";
 import Navbar from "../navbar/Navbar";
 function Cart() {
+
+
+
+
   return (
 
     <div>

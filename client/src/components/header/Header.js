@@ -21,8 +21,8 @@ import {FaChild} from "react-icons/fa"
 import menimg from "../../images/men_fashion.jpg"
 import womenimg from "../../images/women_fashion.jpg"
 import kidsimg from "../../images/kids_fashion.jpg"
-import carousel1 from "../../images/carousel1.jpg"
 
+import Navbar from "../navbar/Navbar";
 
 function Header() {
 
@@ -62,7 +62,7 @@ maxHeight: '100%', // Set maximum height of images to 100% of carousel height
   return (
     <div>
       <div className="image-container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        {/* <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src={img} alt="Logo" className="logo" />
@@ -132,7 +132,8 @@ maxHeight: '100%', // Set maximum height of images to 100% of carousel height
               </form>
             </div>
           </div>
-        </nav>
+        </nav> */}
+        <Navbar></Navbar>
 <div >
 {/* <Carousel style={{maxHeight: '100vh'}}>
       <Carousel.Item>

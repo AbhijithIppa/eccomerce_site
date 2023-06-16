@@ -15,17 +15,25 @@ import { BsBasket2Fill } from "react-icons/bs";
 
 import { useNavigate } from "react-router-dom";
 function Navbar() {
+  let navigate=useNavigate();
+  let tocart=()=>{
+    navigate("/cart")
+  }
+
+  let toUser=()=>{
+    navigate("/user")
+  }
   return (
     <div>
           <div className="image-container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src={img} alt="Logo" className="logo" />
             </a>
 
             <a class="navbar-brand" href="#">
-              FARM
+              FASHION
             </a>
             <button
               class="navbar-toggler"
@@ -81,10 +89,10 @@ function Navbar() {
                 />
                 <BiSearchAlt className="sicon"></BiSearchAlt>
                 <BiFilterAlt className="sicon"></BiFilterAlt>
-                <MdMonitorHeart className="sicon"></MdMonitorHeart>
-                <HiShoppingCart className="sicon"></HiShoppingCart>
-                <FaLightbulb className="icon"></FaLightbulb>
-                
+               
+                <HiShoppingCart onClick={tocart} className="sicon"></HiShoppingCart>
+              
+                <FaUserPlus  onClick={toUser}className="sicon"></FaUserPlus>
               </form>
             </div>
           </div>
