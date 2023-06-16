@@ -21,7 +21,7 @@ import {FaChild} from "react-icons/fa"
 import menimg from "../../images/men_fashion.jpg"
 import womenimg from "../../images/women_fashion.jpg"
 import kidsimg from "../../images/kids_fashion.jpg"
-import carousel1 from "../../images/carousel1.jpg"
+
 
 
 function Header() {
