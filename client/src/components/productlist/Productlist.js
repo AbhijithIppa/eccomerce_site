@@ -1,5 +1,5 @@
 import "./Productlist.css"
-import Header from "../header/Header"
+// import Header from "../header/Header"
 import React from 'react'
 import { BsCurrencyRupee } from "react-icons/bs"
 import Dropdown from 'react-bootstrap/Dropdown'
