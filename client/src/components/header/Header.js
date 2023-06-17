@@ -21,7 +21,12 @@ import {FaChild} from "react-icons/fa"
 import menimg from "../../images/men_fashion.jpg"
 import womenimg from "../../images/women_fashion.jpg"
 import kidsimg from "../../images/kids_fashion.jpg"
-
+import { CiDeliveryTruck } from "react-icons/ci";
+import {BsChatRightDots} from "react-icons/bs"
+import {BsCreditCard2Back} from "react-icons/bs"
+import {FaExchangeAlt} from "react-icons/fa"
+import {TbPigMoney} from "react-icons/tb"
+import Footer from "../footer/Footer";
 
 
 function Header() {
@@ -314,8 +319,28 @@ maxHeight: '100%', // Set maximum height of images to 100% of carousel height
           </div>
         </Card>
       </div>
-
-      <div></div>
+      <hr/>
+      {/* new 24/7 tag */}
+      <div className="d-flex justify-content-evenly border border-dark" style={{backgroundColor:"ButtonShadow"}}> 
+          <div className="text-center">
+            <CiDeliveryTruck style={{fontSize:"180px"}}/>
+            <p style={{fontFamily:"fantasy"}}>Free delivery</p>
+          </div>
+          <div className="text-center py-4">
+            
+            <BsChatRightDots style={{fontSize:"140px"}}/>
+            <p style={{fontFamily:"fantasy"}}>24/7 Free chat</p>
+          </div>
+          <div className="text-center py-2">
+            <BsCreditCard2Back style={{fontSize:"150px"}}/>
+            <p style={{fontFamily:"fantasy"}}>Secured Payment</p>
+          </div>
+          <div className="text-center py-4">
+            <FaExchangeAlt style={{fontSize:"130px"}}/>
+            <p style={{fontFamily:"fantasy"}}>Free exchange & returns</p>
+          </div>
+      </div>
+      <Footer/>
     </div>
   );
 }
