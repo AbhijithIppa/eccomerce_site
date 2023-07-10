@@ -19,26 +19,7 @@ function Footer() {
                     <BsGoogle style={{margin:'15px'}}/>
                 </div>
             </div>
-            {/* task bar */}
-            {/* <div>
-            <ul className='list-unstyled d-flex p-3' style={{marginLeft:"400px"}}>
-                <li >
-                    <a href='#' style={{textDecoration:'None',margin:"20px",color:"white"}}>ABOUT US</a>
-                </li>
-                <li>
-                    <a href='#' style={{textDecoration:'None',margin:"30px",color:"white"}}>PRODUCT</a>
-                </li>
-                <li>
-                    <a href='#' style={{textDecoration:'None',margin:"30px",color:"white"}}>AWARDS</a>
-                </li>
-                <li>
-                    <a href='#' style={{textDecoration:'None',margin:"30px",color:"white"}}>HELP</a>
-                </li>
-                <li>
-                    <a href='#' style={{textDecoration:'None',margin:"20px",color:"white"}}>CONTACT</a>
-                </li>
-            </ul>
-            </div> */}
+         
            
             <div className="container my-">
 
@@ -104,14 +85,7 @@ function Footer() {
                         <p className='text-white'><ImLocation style={{marginRight:"9px"}} />+91 696-969-696</p>
                         <p className='text-white'><BsTelephone style={{marginRight:"9px"}}/>King's Landing,Europe</p>
 
-                    {/* <h5 className="text-uppercase mb-4">Sign up to our newsletter</h5>
-
-                    <div class="form-outline form-white mb-4">
-                        <input type="email" id="form5Example2" className="form-control" />
-                        <label className="form-label" htmlForfor="form5Example2">Email address</label>
-                    </div>
-
-                    <button type="submit" className=" bg-warning btn btn-outline-white btn-block">Subscribe</button> */}
+                  
                     </div>
                     
                 </div>

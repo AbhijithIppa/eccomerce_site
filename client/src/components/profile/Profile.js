@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Profile.css";
-import {Button} from "react-bootstrap"
+import { Button } from "react-bootstrap";
 function Profile() {
   const [fullName, setFullName] = useState("Johnatan Smith");
   const [email, setEmail] = useState("example@example.com");
@@ -54,92 +54,92 @@ function Profile() {
               </div>
             </div>
 
-            
-      <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Full Name</p>
-              </div>
-              <div class="col-sm-9">
-                <input
-                  type="text"
-                  className="form-control"
-                  value={fullName}
-                  onChange={handleFullNameChange}
-                />
+            <div class="col-lg-8">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Full Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={fullName}
+                        onChange={handleFullNameChange}
+                      />
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input
+                        type="email"
+                        className="form-control"
+                        value={email}
+                        onChange={handleEmailChange}
+                      />
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Phone</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input
+                        type="tel"
+                        className="form-control"
+                        value={phone}
+                        onChange={handlePhoneChange}
+                      />
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Mobile</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input
+                        type="tel"
+                        className="form-control"
+                        value={mobile}
+                        onChange={handleMobileChange}
+                      />
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={address}
+                        onChange={handleAddressChange}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <hr />
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <input
-                  type="email"
-                  className="form-control"
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-              </div>
-            </div>
-            <hr />
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
-              </div>
-              <div class="col-sm-9">
-                <input
-                  type="tel"
-                  className="form-control"
-                  value={phone}
-                  onChange={handlePhoneChange}
-                />
-              </div>
-            </div>
-            <hr />
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
-              </div>
-              <div class="col-sm-9">
-                <input
-                  type="tel"
-                  className="form-control"
-                  value={mobile}
-                  onChange={handleMobileChange}
-                />
-              </div>
-            </div>
-            <hr />
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Address</p>
-              </div>
-              <div class="col-sm-9">
-                <input
-                  type="text"
-                  className="form-control"
-                  value={address}
-                  onChange={handleAddressChange}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      </div>
-     
           </div>
           <div className="d-flex justify-content-center align-items-center mb-2">
-          <Button type="button" className="btn"style={{ backgroundColor: "black", color: "white" }}>
-            Save
-          </Button>
+            <Button
+              type="button"
+              className="btn"
+              style={{ backgroundColor: "black", color: "white" }}
+            >
+              Save
+            </Button>
+          </div>
         </div>
-        </div>
-        
       </section>
     </div>
   );

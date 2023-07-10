@@ -2,13 +2,18 @@ import "./Categ_seeds.css";
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import { Button } from "react-bootstrap";
-import img from "../../images/planter.jpg";
+import img from "../../images/dress.jpg";
 import { MdLocalShipping, MdYard } from "react-icons/md";
 import { HiCurrencyRupee } from "react-icons/hi";
-import x from "../../images/pexels-athena-2042915.jpg";
-import y from "../../images/pexels-febe-theodora-1836600.jpg";
 import z from "../../images/pexels-lisa-fotios-1982095.jpg";
+import Picks from "../picks/Picks";
+import Footer from "../footer/Footer"
+import { useNavigate } from "react-router-dom";
 function Categ_seeds() {
+  const navigate =useNavigate();
+  let gotoWomen=()=>{
+    navigate("/pr")
+  }
   return (
     <div>
       <Navbar></Navbar>
@@ -26,7 +31,7 @@ function Categ_seeds() {
               marginTop: "107px",
             }}
           >
-            Choose Our Top Picks Planters
+            Choose Our Top Products
           </p>
           <p
             style={{
@@ -37,10 +42,11 @@ function Categ_seeds() {
               width: "518px",
             }}
           >
-            We stands for beauty& style in your house. We have an impressive
-            selection of the planters that you'll love
+            We stands for beauty& style . We have an impressive
+            selection of the clothes that you'll love
           </p>
           <Button
+          onClick={gotoWomen}
             style={{
               fontSize: "15px",
               width: "168px",
@@ -107,6 +113,8 @@ function Categ_seeds() {
             src={img}
             style={{
               width: "550px",
+              height:"550px",
+              objectFit:"cover",
               marginTop: "75px",
               marginLeft: "75px",
               borderRadius: "50px",
@@ -117,10 +125,10 @@ function Categ_seeds() {
       <hr></hr>
 
       <div
-        className="container"
-        style={{ marginLeft: "150px", marginTop: "150px" }}
+       
+       
       >
-        <div className="row">
+        {/* <div className="row">
           <div className="col ">
             <MdLocalShipping style={{ fontSize: "70px" }}></MdLocalShipping>
 
@@ -177,10 +185,10 @@ function Categ_seeds() {
               customers
             </h2>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="container" style={{ marginTop: "200px" }}>
+      {/* <div className="container" style={{ marginTop: "0px" }}>
         <div className="row">
           <div className="col">
             <div className="row" style={{ maxWidth: "700px" }}>
@@ -272,7 +280,23 @@ function Categ_seeds() {
             </div>
           </div>
         </div>
+      </div> */}
+
+<div className="recommendations ms-3" >
+        <h3>Categories</h3>
+        <div className="product-scroll">
+          <div className="product-card">Product 1</div>
+          <div className="product-card">Product 2</div>
+          <div className="product-card">Product 3</div>
+          <div className="product-card">Product 4</div>
+          <div className="product-card">Product 5</div>
+          <div className="product-card">Product 6</div>
+          <div className="product-card">Product 7</div>
+          <div className="product-card">Product 8</div>
+        </div>
       </div>
+      <Picks></Picks>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

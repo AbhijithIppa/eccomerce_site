@@ -15,7 +15,6 @@ import Navbar from "../navbar/Navbar";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BsChatRightDots } from "react-icons/bs";
 import { BsCreditCard2Back } from "react-icons/bs";
-
 import toolsimg from "../../images/tools.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -54,112 +53,20 @@ function Header() {
     }
   };
   const imageStyle = {
-    objectFit: "contain", // Ensure images fit within the carousel viewport
-
-    maxHeight: "100%", // Set maximum height of images to 100% of carousel height
-    width: "100%", // Set width of images to 100% to maintain aspect ratio
+    objectFit: 'contain',
+    
+   
+maxHeight: '100%', 
+    width: '100%',
   };
 
   return (
     <div>
       <div className="image-container">
-        {/* <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src={img} alt="Logo" className="logo" />
-            </a>
-
-            <a class="navbar-brand" href="#">
-              FASHION
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex rightpart" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Type To Search..."
-                  aria-label="Search"
-                />
-                <BiSearchAlt className="sicon"></BiSearchAlt>
-                <BiFilterAlt className="sicon"></BiFilterAlt>
-               
-                <HiShoppingCart onClick={tocart} className="sicon"></HiShoppingCart>
-              
-                <FaUserPlus className="sicon"></FaUserPlus>
-              </form>
-            </div>
-          </div>
-        </nav> */}
+   
         <Navbar></Navbar>
         <div>
-          {/* <Carousel style={{maxHeight: '100vh'}}>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={carousel1}
-          style={imageStyle}
-          alt="Image 1"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="image2.jpg"
-          alt="Image 2"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="image3.jpg"
-          alt="Image 3"
-        />
-      </Carousel.Item>
-    </Carousel> */}
+        
         </div>
 
         <div className="header-content">
@@ -180,44 +87,7 @@ function Header() {
       </div>
 
       <div style={{ display: "flex", marginLeft: "110px", marginTop: "20px" }}>
-        {/*BELOW IS THE REFERENCE CODE FOR RETRIVING DATA FROM MONGODB*/}
-        {/* {customs.map((custom) => (
-          <Card
-            className="horizontal-card"
-            style={{ width: "400px", marginRight: "25px" }}
-          >
-            <div className="d-flex">
-              <div className="img-container">
-                <img
-                  src={require(`../../${custom.email}`)}
-                  alt="Profile"
-                  className="cir-image"
-                />
-              </div>
-              <Card.Body>
-                <div style={{ display: "flex" }}>
-                  <Card.Title>{custom.name}</Card.Title>
-                  <FaSeedling
-                    style={{
-                      marginLeft: "10px",
-                      marginTop: "3px",
-                      color: "366207",
-                    }}
-                  ></FaSeedling>
-                </div>
-
-                <Card.Text>{custom.phone}</Card.Text>
-                <Button
-                  style={{ backgroundColor: "black" }}
-                  onClick={categ_seeds}
-                >
-                  Shop Now
-                </Button>
-              </Card.Body>
-            </div>
-          </Card>
-        ))} */}
-        {/* ---------------------------------------------------------------------- */}
+        
 
         <Card
           className="horizontal-card"
@@ -249,6 +119,7 @@ function Header() {
             </Card.Body>
           </div>
         </Card>
+
 
         <Card
           className="horizontal-card"
@@ -324,7 +195,7 @@ function Header() {
           <p style={{ fontFamily: "fantasy" }}>Free exchange & returns</p>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

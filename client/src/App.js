@@ -1,7 +1,7 @@
 import RootLayout from "./RootLayout";
 import './App.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import Home from "./components/home/Home"
+import { NumberProvider } from "./components/contextProvider/CustomContextProvider";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categ_seeds from "./components/categ_seeds/Categ_seeds";
 import Header from "./components/header/Header";
@@ -11,7 +11,11 @@ import Profile from "./components/profile/Profile";
 import SideMenu from "./components/side_menu/SideMenu";
 import User from "./User";
 import WishList from "./components/wishlist/WishList";
-
+import Productlist from "./components/productlist/Productlist"
+import Search from "./components/search/Search";
+import Order from "./components/myorders/MyOrders"
+import TrackOrder from "./components/trackorder/TrackOrder";
+import SearchResults from "./components/searchresults/SearchResults"
 function App() {
 
   const routerobj=createBrowserRouter([
@@ -28,8 +32,25 @@ function App() {
           element:<Categ_seeds></Categ_seeds>
         },
         {
+          path:"/pr",
+          element:<Productlist></Productlist>  
+        },
+       
+        {
           path:"/cart",
           element:<Cart></Cart>
+        },
+        {
+          path:"/pd/:id",
+          element:<Productdetails></Productdetails>
+        },
+        {
+          path:"/searchresults/:search",
+          element:<SearchResults></SearchResults>
+        },
+        {
+          path:"/wishlist",
+          element:<WishList></WishList>
         }
       ]
     },
@@ -41,6 +62,18 @@ function App() {
           path:"",
           element:<Profile></Profile>
         },
+        {
+          path:"myorders",
+          element:<Order></Order>
+        },
+        {
+          path:"trackorder",
+          element:<TrackOrder></TrackOrder>
+        },
+        {
+          path:"wishlist",
+          element:<WishList></WishList>
+        }
         
       ]
     }
@@ -48,7 +81,10 @@ function App() {
   ])
   return (
     <div className="App">
-      <RouterProvider router={routerobj}></RouterProvider>
+      <RouterProvider router={routerobj}>
+      
+      </RouterProvider>
+     
     </div>
   );
 }
